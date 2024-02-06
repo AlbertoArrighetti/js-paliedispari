@@ -37,10 +37,10 @@ return true;
 // verifico se la parola è palindroma 
 if (isPalindrome(userWord)){
     // se lo è
-    console.log("è palindroma")
+    document.getElementById("result").innerHTML = userWord + " : è palindroma";
 
     // altrimenti se non lo è
 }else {
-    console.log("non è palindroma")
+    document.getElementById("result").innerHTML = userWord + " : non è palindroma";
 }
 
