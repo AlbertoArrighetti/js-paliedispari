@@ -55,23 +55,29 @@ function everOrOdd() {
     }
 
 }
-const result = everOrOdd();
+const sumResult = everOrOdd();
 
 
+
+
+let result;
 
 
 
 
 // Se l'utente ha indovinato l'esito (pari o dispari) della somma ha vinto, altrimenti ha perso.
 
-if (userChoice == result){
-    console.log("HAI VINTO");
+if (userChoice == sumResult){
+    // se vince 
+    result = ("Complimenti, hai vinto!!");
 }else {
-    console.log("HAI PERSO");
+    // se perde 
+    result = ("Mi dispiace, hai perso.");
 }
 
-
-
+// scrivo in pagina 
+document.getElementById("infos").innerHTML = `Hai scelto: ${userChoice}. <br> Hai scelto il numero: ${userNumber}. <br> Il computer sceglie il numero: ${computerNumber}.`;
+document.getElementById("result").innerText = result;
 
 
 
