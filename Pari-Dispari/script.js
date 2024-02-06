@@ -1,8 +1,33 @@
 // scelta utente 
 // L’utente sceglie pari o dispari.
+let userChoice;
+// finchè l'utente non inserisce il dato corretto lo richiedo
+do {
+
+    userChoice = prompt("Scegli: pari o dispari").toLowerCase();
+
+    // avverto l'utente se non è corretto 
+    if (userChoice !== "pari" && userChoice !== "dispari"){
+        alert("I dati non sono corretti, riprovare.")
+    }
+
+} while (userChoice !== "pari" && userChoice !== "dispari");
+
+
 // Inserisce un numero da 1 a 5.
-const userChoice = prompt("pari o dipari");
-const userNumber = Number(prompt("Inserisci un numero da 1 a 5"));
+let userNumber;
+// finchè l'utente non inserisce un numero che sia tra 1 e 5
+do{
+
+    userNumber = Number(prompt("Inserisci un numero da 1 a 5"));
+
+    // avverto l'utente se non è corretto
+    if(isNaN(userNumber) || userNumber < 1 || userNumber > 5){
+        alert("Inserisci un numero corretto.")
+    }
+
+
+}while(isNaN(userNumber) || userNumber < 1 || userNumber > 5);
 
 
 // Generiamo un numero random (sempre da 1 a 5) per il computer (usando una funzione).
@@ -31,6 +56,10 @@ function everOrOdd() {
 
 }
 const result = everOrOdd();
+
+
+
+
 
 
 // Se l'utente ha indovinato l'esito (pari o dispari) della somma ha vinto, altrimenti ha perso.
